@@ -23,6 +23,7 @@ class SearchScreen extends StatelessWidget {
           height: 45,
           child: TextField(
             controller: searchController,
+            textAlignVertical: TextAlignVertical.center,
             decoration: InputDecoration(
               hintText: 'Search...',
               prefixIcon: const Icon(Icons.search),
@@ -32,6 +33,7 @@ class SearchScreen extends StatelessWidget {
                   searchController.clear();
                 },
               ),
+              contentPadding: const EdgeInsets.symmetric(vertical: 10),
               border:
                   OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
             ),
@@ -66,8 +68,7 @@ class SearchScreen extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
-                  trailing:
-                      const Icon(Icons.close, size: 15, color: colorGrey),
+                  trailing: const Icon(Icons.close, size: 15, color: colorGrey),
                 )),
           ],
         ),

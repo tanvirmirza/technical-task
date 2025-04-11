@@ -7,11 +7,11 @@ const Color colorGrey = Colors.grey;
 
 //  |--------------------- Progress Stutus ---------------------|
 
-Widget progressStatus({required double value, required String lavel}) {
+Widget progressStatus({required String value, required String lavel}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.center,
     children: [
-      Text(value.toString(),
+      Text(value,
           style: const TextStyle(
             color: colorWhite,
             fontSize: 22,
@@ -28,8 +28,8 @@ Widget progressStatus({required double value, required String lavel}) {
 
 Widget dashedCircularProgressBar(valueNotifier) {
   return SizedBox(
-    height: 95,
-    width: 95,
+    height: 90,
+    width: 90,
     child: DashedCircularProgressBar.aspectRatio(
       aspectRatio: 1,
       valueNotifier: valueNotifier,
@@ -153,7 +153,7 @@ Widget profileProgressStatus({
       ),
     ),
     child: Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
       child: Column(
         children: [
           Text(
